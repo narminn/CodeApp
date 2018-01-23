@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -54,41 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutGroupsForm.cs">
+    <Compile Include="AddGroupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutGroupsForm.Designer.cs">
-      <DependentUpon>AboutGroupsForm.cs</DependentUpon>
+    <Compile Include="AddGroupForm.Designer.cs">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AboutMentorForm.cs">
+    <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutMentorForm.Designer.cs">
-      <DependentUpon>AboutMentorForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AboutStudentsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutStudentsForm.Designer.cs">
-      <DependentUpon>AboutStudentsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AboutTeacherForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutTeacherForm.Designer.cs">
-      <DependentUpon>AboutTeacherForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddMentorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddMentorForm.Designer.cs">
-      <DependentUpon>AddMentorForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddTeacherForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddTeacherForm.Designer.cs">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
@@ -132,12 +109,6 @@
     <Compile Include="Mentor.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
     </Compile>
-    <Compile Include="MentorInfoform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MentorInfoform.Designer.cs">
-      <DependentUpon>MentorInfoform.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs">
@@ -152,50 +123,23 @@
     <Compile Include="Task.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
     </Compile>
-    <Compile Include="TaskForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TaskForm.Designer.cs">
-      <DependentUpon>TaskForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Task_types.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeacherInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherInfoForm.Designer.cs">
-      <DependentUpon>TeacherInfoForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AboutGroupsForm.resx">
-      <DependentUpon>AboutGroupsForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddGroupForm.resx">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AboutMentorForm.resx">
-      <DependentUpon>AboutMentorForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AboutStudentsForm.resx">
-      <DependentUpon>AboutStudentsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AboutTeacherForm.resx">
-      <DependentUpon>AboutTeacherForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddMentorForm.resx">
-      <DependentUpon>AddMentorForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddTeacherForm.resx">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MentorInfoform.resx">
-      <DependentUpon>MentorInfoform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -207,12 +151,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TaskForm.resx">
-      <DependentUpon>TaskForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeacherInfoForm.resx">
-      <DependentUpon>TeacherInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="CodeAcademy.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CodeAcademy.Designer.cs</LastGenOutput>
@@ -257,13 +195,9 @@
       <DependentUpon>CodeAcademy.edmx</DependentUpon>
       <LastGenOutput>CodeAcademy.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\gradient_24.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Upload\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,16 +63,6 @@ namespace CodeAcademyInfoSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gradient_24 {
-            get {
-                object obj = ResourceManager.GetObject("gradient_24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap if_87_111095 {
             get {
                 object obj = ResourceManager.GetObject("if_87_111095", resourceCulture);

@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.g_name = new System.Windows.Forms.TextBox();
-            this.g_start_date = new System.Windows.Forms.TextBox();
             this.g_add_btn = new System.Windows.Forms.Button();
             this.t_update_btn = new System.Windows.Forms.Button();
             this.t_delete_btn = new System.Windows.Forms.Button();
@@ -43,6 +42,13 @@
             this.g_teacher = new System.Windows.Forms.ComboBox();
             this.g_mentor = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.g_start_data = new System.Windows.Forms.DateTimePicker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,13 +110,6 @@
             this.g_name.Size = new System.Drawing.Size(121, 20);
             this.g_name.TabIndex = 8;
             // 
-            // g_start_date
-            // 
-            this.g_start_date.Location = new System.Drawing.Point(145, 150);
-            this.g_start_date.Name = "g_start_date";
-            this.g_start_date.Size = new System.Drawing.Size(121, 20);
-            this.g_start_date.TabIndex = 11;
-            // 
             // g_add_btn
             // 
             this.g_add_btn.Location = new System.Drawing.Point(57, 215);
@@ -119,6 +118,7 @@
             this.g_add_btn.TabIndex = 12;
             this.g_add_btn.Text = "Add";
             this.g_add_btn.UseVisualStyleBackColor = true;
+            this.g_add_btn.Click += new System.EventHandler(this.g_add_btn_Click);
             // 
             // t_update_btn
             // 
@@ -128,7 +128,7 @@
             this.t_update_btn.TabIndex = 13;
             this.t_update_btn.Text = "Update";
             this.t_update_btn.UseVisualStyleBackColor = true;
-           
+            this.t_update_btn.Click += new System.EventHandler(this.t_update_btn_Click);
             // 
             // t_delete_btn
             // 
@@ -138,6 +138,7 @@
             this.t_delete_btn.TabIndex = 14;
             this.t_delete_btn.Text = "Delete";
             this.t_delete_btn.UseVisualStyleBackColor = true;
+            this.t_delete_btn.Click += new System.EventHandler(this.t_delete_btn_Click);
             // 
             // g_type
             // 
@@ -165,17 +166,64 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(12, 267);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(747, 150);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.select_group);
+            // 
+            // g_start_data
+            // 
+            this.g_start_data.Location = new System.Drawing.Point(145, 150);
+            this.g_start_data.Name = "g_start_data";
+            this.g_start_data.Size = new System.Drawing.Size(200, 20);
+            this.g_start_data.TabIndex = 19;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Group Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Group Type";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Group Teacher";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Group Mentor";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Group Start Date";
+            this.Column6.Name = "Column6";
             // 
             // AddGroupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.g_start_data);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.g_mentor);
             this.Controls.Add(this.g_teacher);
@@ -183,7 +231,6 @@
             this.Controls.Add(this.t_delete_btn);
             this.Controls.Add(this.t_update_btn);
             this.Controls.Add(this.g_add_btn);
-            this.Controls.Add(this.g_start_date);
             this.Controls.Add(this.g_name);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -208,7 +255,6 @@
         private System.Windows.Forms.Label label5;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.TextBox g_name;
-        private System.Windows.Forms.TextBox g_start_date;
         private System.Windows.Forms.Button g_add_btn;
         private System.Windows.Forms.Button t_update_btn;
         private System.Windows.Forms.Button t_delete_btn;
@@ -216,5 +262,12 @@
         private System.Windows.Forms.ComboBox g_teacher;
         private System.Windows.Forms.ComboBox g_mentor;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker g_start_data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
