@@ -12,21 +12,22 @@ namespace CodeAcademyInfoSystem
 {
     public partial class AdminForm : Form
     {
+       
         public AdminForm()
         {
             InitializeComponent();
         }
 
-        private void add_teacher_btn_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            AddTeacherForm add_teacher = new AddTeacherForm();
-            add_teacher.ShowDialog();
+            AddGroupForm add_group = new AddGroupForm();
+            add_group.ShowDialog();
         }
 
-        private void add_mentor_btn_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            AddMentorForm add_mentor = new AddMentorForm();
-            add_mentor.ShowDialog();
+            AddStudent add_student = new AddStudent();
+            add_student.ShowDialog();
         }
     }
 }

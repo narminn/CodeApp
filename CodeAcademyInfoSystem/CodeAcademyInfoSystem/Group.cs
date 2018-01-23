@@ -18,7 +18,6 @@ namespace CodeAcademyInfoSystem
         public Group()
         {
             this.Students = new HashSet<Student>();
-            this.Tasks = new HashSet<Task>();
         }
     
         public int id { get; set; }
@@ -33,7 +32,5 @@ namespace CodeAcademyInfoSystem
         public virtual Teacher Teacher { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Tasks { get; set; }
     }
 }

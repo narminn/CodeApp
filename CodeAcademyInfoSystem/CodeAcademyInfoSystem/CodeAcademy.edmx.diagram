@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="CodeAcademy_DBModel.Mentor" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CodeAcademy_DBModel.Student" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CodeAcademy_DBModel.Task_types" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CodeAcademy_DBModel.Task" Width="1.5" PointX="10.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CodeAcademy_DBModel.Task" Width="1.5" PointX="9.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CodeAcademy_DBModel.Teacher" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Mentors_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Students_Gender" ManuallyRouted="false" />
@@ -24,7 +24,6 @@
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Students_Groups" ManuallyRouted="false" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Students" ManuallyRouted="false" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Task_types" ManuallyRouted="false" />
-        <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Groups" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
