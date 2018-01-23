@@ -24,6 +24,7 @@
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Students_Groups" ManuallyRouted="false" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Students" ManuallyRouted="false" />
         <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Task_types" ManuallyRouted="false" />
+        <AssociationConnector Association="CodeAcademy_DBModel.FK_Tasks_Groups" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

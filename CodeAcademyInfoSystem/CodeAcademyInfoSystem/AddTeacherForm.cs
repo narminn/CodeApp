@@ -50,7 +50,7 @@ namespace CodeAcademyInfoSystem
             tch.teacher_email = t_email.Text;
             tch.teacher_password = t_password.Text;
             tch.teacher_info = t_info.Text;
-            tch.teacher_photo = imageName;
+            tch.teacher_photo= imageName;
            
            
             db.Teachers.Add(tch);

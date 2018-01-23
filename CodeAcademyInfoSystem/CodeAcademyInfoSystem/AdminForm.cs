@@ -29,5 +29,17 @@ namespace CodeAcademyInfoSystem
             AddStudent add_student = new AddStudent();
             add_student.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddTeacherForm t = new AddTeacherForm();
+            t.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddMentorForm m = new AddMentorForm();
+            m.ShowDialog();
+        }
     }
 }
