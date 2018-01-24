@@ -162,6 +162,12 @@
     <Compile Include="StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInfoForm.Designer.cs">
+      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Task.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
     </Compile>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskPointsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskPointsForm.Designer.cs">
+      <DependentUpon>TaskPointsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Task_types.cs">
       <DependentUpon>CodeAcademy.tt</DependentUpon>
@@ -226,8 +238,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StudentInfoForm.resx">
+      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskPointsForm.resx">
+      <DependentUpon>TaskPointsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherInfoForm.resx">
       <DependentUpon>TeacherInfoForm.cs</DependentUpon>
@@ -276,6 +294,7 @@
       <DependentUpon>CodeAcademy.edmx</DependentUpon>
       <LastGenOutput>CodeAcademy.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user.png" />
     <Content Include="Upload\20180122521621Larry_Ellison %281%29.jpg" />
     <Content Include="Upload\20180123030010jade_raymond.jpg" />
     <Content Include="Upload\20180123061644Custom.jpg" />

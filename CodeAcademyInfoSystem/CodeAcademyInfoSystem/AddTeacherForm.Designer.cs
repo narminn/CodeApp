@@ -293,7 +293,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::CodeAcademyInfoSystem.Properties.Resources.user;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::CodeAcademyInfoSystem.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(718, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(145, 145);

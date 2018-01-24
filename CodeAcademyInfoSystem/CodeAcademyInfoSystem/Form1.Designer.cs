@@ -48,7 +48,7 @@
             this.email.Location = new System.Drawing.Point(75, 21);
             this.email.Multiline = true;
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(324, 46);
+            this.email.Size = new System.Drawing.Size(324, 30);
             this.email.TabIndex = 1;
             this.email.Text = "Email";
             // 
@@ -59,17 +59,17 @@
             this.panel1.Controls.Add(this.login_btn);
             this.panel1.Controls.Add(this.pswrd);
             this.panel1.Controls.Add(this.email);
-            this.panel1.Location = new System.Drawing.Point(105, 218);
+            this.panel1.Location = new System.Drawing.Point(114, 218);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(411, 211);
+            this.panel1.Size = new System.Drawing.Size(436, 211);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CodeAcademyInfoSystem.Properties.Resources.if_icons_password_1564520;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 73);
+            this.pictureBox3.Location = new System.Drawing.Point(37, 73);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 46);
+            this.pictureBox3.Size = new System.Drawing.Size(32, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -77,9 +77,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CodeAcademyInfoSystem.Properties.Resources.if_87_111095;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -89,9 +89,9 @@
             this.login_btn.BackColor = System.Drawing.SystemColors.Highlight;
             this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.login_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.login_btn.Location = new System.Drawing.Point(26, 139);
+            this.login_btn.Location = new System.Drawing.Point(37, 139);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(373, 35);
+            this.login_btn.Size = new System.Drawing.Size(362, 35);
             this.login_btn.TabIndex = 3;
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             this.pswrd.Location = new System.Drawing.Point(75, 73);
             this.pswrd.Multiline = true;
             this.pswrd.Name = "pswrd";
-            this.pswrd.Size = new System.Drawing.Size(324, 46);
+            this.pswrd.Size = new System.Drawing.Size(324, 33);
             this.pswrd.TabIndex = 2;
             this.pswrd.Text = "Password";
             this.pswrd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.password);
@@ -122,7 +122,7 @@
             this.wrong.AutoSize = true;
             this.wrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.wrong.ForeColor = System.Drawing.Color.Red;
-            this.wrong.Location = new System.Drawing.Point(102, 179);
+            this.wrong.Location = new System.Drawing.Point(173, 179);
             this.wrong.Name = "wrong";
             this.wrong.Size = new System.Drawing.Size(322, 17);
             this.wrong.TabIndex = 3;

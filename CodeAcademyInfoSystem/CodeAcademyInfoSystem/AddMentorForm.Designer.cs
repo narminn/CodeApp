@@ -293,6 +293,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::CodeAcademyInfoSystem.Properties.Resources.user;
             this.pictureBox2.Location = new System.Drawing.Point(714, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(145, 145);

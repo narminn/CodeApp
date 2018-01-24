@@ -37,6 +37,7 @@ namespace CodeAcademyInfoSystem
             {
                 g_mentor.Items.Add(item.mentor_name);
             }
+            fillDataGroups();
         }
 
         private void g_add_btn_Click(object sender, EventArgs e)
@@ -64,9 +65,9 @@ namespace CodeAcademyInfoSystem
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].Cells[0].Value = item.id;
                 dataGridView1.Rows[i].Cells[1].Value = item.group_name;
-                dataGridView1.Rows[i].Cells[2].Value = item.group_type_id;
-                dataGridView1.Rows[i].Cells[3].Value = item.group_techer_id;
-                dataGridView1.Rows[i].Cells[4].Value = item.group_mentor_id;
+                dataGridView1.Rows[i].Cells[2].Value = item.Group_types.group_type_name;
+                dataGridView1.Rows[i].Cells[3].Value = item.Teacher.teacher_name;
+                dataGridView1.Rows[i].Cells[4].Value = item.Mentor.mentor_name;
                 dataGridView1.Rows[i].Cells[5].Value = item.group_start_date;
                 i++;
             }

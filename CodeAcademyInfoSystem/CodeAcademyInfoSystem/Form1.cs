@@ -15,6 +15,8 @@ namespace CodeAcademyInfoSystem
         CodeAcademy_DBEntities db = new CodeAcademy_DBEntities();
         private Mentor selectedMntr;
         private Teacher selectedTchr;
+        private Student selectedStd;
+        
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace CodeAcademyInfoSystem
         {
             var tech = db.Teachers.FirstOrDefault(t => t.teacher_email == email.Text && t.teacher_password == pswrd.Text);
             var mntr = db.Mentors.FirstOrDefault(m => m.mentor_email == email.Text && m.mentor_password == pswrd.Text);
+            var std = db.Students.FirstOrDefault(s => s.student_email == email.Text && s.student_password == pswrd.Text);
             if (email.Text == "admin" && pswrd.Text == "admin")
             {
                 AdminForm admfrm = new AdminForm();
@@ -66,6 +69,25 @@ namespace CodeAcademyInfoSystem
                 Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + selectedMntr.mentor_photo);
                 mntInfo.pictureBoxMentor.Image = image;
                 mntInfo.ShowDialog();
+            }
+            else if (std != null)
+            {
+                int stdId = db.Students.Where(d=>d.student_email == email.Text).First().id;
+                selectedStd = db.Students.Find(stdId);
+                StudentInfoForm stdInfo = new StudentInfoForm();
+                stdInfo.label_s_name.Text = selectedStd.student_name;
+                stdInfo.label_s_surname.Text = selectedStd.student_surname;
+                stdInfo.label_s_gender.Text = selectedStd.Gender.gender_name;
+                stdInfo.label_s_phone.Text = selectedStd.student_phone;
+                stdInfo.label_s_email.Text = selectedStd.student_email;
+                stdInfo.label_s_info.Text = selectedStd.student_info;
+                stdInfo.label_s_github.Text = selectedStd.student_github_account;
+                stdInfo.label_s_group.Text = selectedStd.Group.group_name;
+                stdInfo.label_s_point.Text = selectedStd.student_cap_point.ToString();
+                
+                Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + selectedStd.student_photo);
+                stdInfo.pictureBoxStd.Image = image;
+                stdInfo.ShowDialog();
             }
             else
             {

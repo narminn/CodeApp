@@ -42,13 +42,13 @@
             this.g_teacher = new System.Windows.Forms.ComboBox();
             this.g_mentor = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.g_start_data = new System.Windows.Forms.DateTimePicker();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.g_start_data = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,16 +177,9 @@
             this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(12, 267);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(747, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(860, 199);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.select_group);
-            // 
-            // g_start_data
-            // 
-            this.g_start_data.Location = new System.Drawing.Point(145, 150);
-            this.g_start_data.Name = "g_start_data";
-            this.g_start_data.Size = new System.Drawing.Size(200, 20);
-            this.g_start_data.TabIndex = 19;
             // 
             // Column1
             // 
@@ -218,11 +211,18 @@
             this.Column6.HeaderText = "Group Start Date";
             this.Column6.Name = "Column6";
             // 
+            // g_start_data
+            // 
+            this.g_start_data.Location = new System.Drawing.Point(145, 150);
+            this.g_start_data.Name = "g_start_data";
+            this.g_start_data.Size = new System.Drawing.Size(200, 20);
+            this.g_start_data.TabIndex = 19;
+            // 
             // AddGroupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.g_start_data);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.g_mentor);

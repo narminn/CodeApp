@@ -71,3 +71,5 @@ C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyIn
 C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyInfoSystem\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyInfoSystem\bin\Debug\EntityFramework.xml
 C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyInfoSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyInfoSystem\obj\Debug\CodeAcademyInfoSystem.StudentInfoForm.resources
+C:\Users\Dr.Rashad\Desktop\son versiya 18.10\CodeAcademyInfoSystem\CodeAcademyInfoSystem\obj\Debug\CodeAcademyInfoSystem.TaskPointsForm.resources
