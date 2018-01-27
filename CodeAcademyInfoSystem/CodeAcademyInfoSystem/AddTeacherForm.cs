@@ -8,14 +8,17 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CodeAcademyInfoSystem
 {
     public partial class AddTeacherForm : Form
     {
         CodeAcademy_DBEntities db = new CodeAcademy_DBEntities();
-        OpenFileDialog img = new OpenFileDialog();
+        //OpenFileDialog img = new OpenFileDialog();
         private Teacher selectedTeacher;
+        public string imgSource = "";
+        public string imgName = "";
         public AddTeacherForm()
         {
             InitializeComponent();
@@ -31,16 +34,25 @@ namespace CodeAcademyInfoSystem
         }
         private void browse_Click(object sender, EventArgs e)
         {
-            img.ShowDialog();
-            this.pictureBox1.Image = Image.FromFile(img.FileName);
+            //img.ShowDialog();
+            //this.pictureBox1.Image = Image.FromFile(img.FileName);
+            OpenFileDialog f = new OpenFileDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                imgSource = f.FileName;
+                pictureBox1.ImageLocation = f.FileName;
+                imgName = DateTime.Now.ToString("yyyyMMddssHHmm") + f.SafeFileName;
+            }
         }
 
         private void t_add_btn_Click(object sender, EventArgs e)
         {
-            string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
-            WebClient webclient = new WebClient();
-            string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
-            webclient.DownloadFile(img.FileName, path);
+            //string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
+            //WebClient webclient = new WebClient();
+            //string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
+            //webclient.DownloadFile(img.FileName, path);
+            File.Copy(imgSource, @"../../Images/" + imgName);
+
             int gender_id = db.Genders.Where(g => g.gender_name == t_gender.Text).First().id;
             Teacher tch = new Teacher();
             tch.teacher_name = t_name.Text;
@@ -50,7 +62,7 @@ namespace CodeAcademyInfoSystem
             tch.teacher_email = t_email.Text;
             tch.teacher_password = t_password.Text;
             tch.teacher_info = t_info.Text;
-            tch.teacher_photo= imageName;
+            tch.teacher_photo= imgName;
            
            
             db.Teachers.Add(tch);
@@ -99,7 +111,8 @@ namespace CodeAcademyInfoSystem
             tchInfo.label_t_phone.Text = selectedTeacher.teacher_phone;
             tchInfo.label_t_email.Text = selectedTeacher.teacher_email;
             tchInfo.label_t_info.Text = selectedTeacher.teacher_info;
-            Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\"+selectedTeacher.teacher_photo);
+            Image image = Image.FromFile(@"../../Images/" + selectedTeacher.teacher_photo);
+            
             tchInfo.pictureBoxTeacher.Image = image;
             tchInfo.ShowDialog();
         }
@@ -124,6 +137,17 @@ namespace CodeAcademyInfoSystem
             db.Teachers.Remove(selectedTeacher);
             db.SaveChanges();
             fillDataTeachers();
+        }
+
+        private void export_teacher_btn_Click(object sender, EventArgs e)
+        {
+            TaskForm tskf = new TaskForm();
+            tskf.exportExcel(dataGridTeacher);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

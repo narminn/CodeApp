@@ -14,6 +14,7 @@ namespace CodeAcademyInfoSystem
         
     {
         CodeAcademy_DBEntities db = new CodeAcademy_DBEntities();
+
         public AboutGroupsForm()
         {
             InitializeComponent();
@@ -36,9 +37,20 @@ namespace CodeAcademyInfoSystem
                 dataGridAboutGrp.Rows[i].Cells[2].Value = item.Group_types.group_type_name;
                 dataGridAboutGrp.Rows[i].Cells[3].Value = item.Teacher.teacher_name;
                 dataGridAboutGrp.Rows[i].Cells[4].Value = item.Mentor.mentor_name;
-                dataGridAboutGrp.Rows[i].Cells[5].Value = item.group_start_date;
+                dataGridAboutGrp.Rows[i].Cells[5].Value = item.group_start_date.ToShortDateString();
                 i++;
             }
+        }
+
+        private void export_abt_grp_btn_Click(object sender, EventArgs e)
+        {
+            TaskForm tskf = new TaskForm();
+            tskf.exportExcel(dataGridAboutGrp);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

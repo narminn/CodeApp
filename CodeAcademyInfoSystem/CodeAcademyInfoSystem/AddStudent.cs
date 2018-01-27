@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -14,8 +15,9 @@ namespace CodeAcademyInfoSystem
     public partial class AddStudent : Form
     {
         CodeAcademy_DBEntities db = new CodeAcademy_DBEntities();
-        OpenFileDialog img = new OpenFileDialog();
-
+        //OpenFileDialog img = new OpenFileDialog();
+        public string imgSource = "";
+        public string imgName = "";
         private Student selectedStudent;
         public AddStudent()
         {
@@ -37,16 +39,24 @@ namespace CodeAcademyInfoSystem
         }
         private void browse_std_Click(object sender, EventArgs e)
         {
-            img.ShowDialog();
-            this.pictureBoxStudent.Image = Image.FromFile(img.FileName);
+            //img.ShowDialog();
+            //this.pictureBoxStudent.Image = Image.FromFile(img.FileName);
+            OpenFileDialog f = new OpenFileDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                imgSource = f.FileName;
+                pictureBoxStudent.ImageLocation = f.FileName;
+                imgName = DateTime.Now.ToString("yyyyMMddssHHmm") + f.SafeFileName;
+            }
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
-            WebClient webclient = new WebClient();
-            string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
-            webclient.DownloadFile(img.FileName, path);
+            //string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
+            //WebClient webclient = new WebClient();
+            //string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
+            //webclient.DownloadFile(img.FileName, path);
+            File.Copy(imgSource, @"../../Images/" + imgName);
             int group_id = db.Groups.Where(g => g.group_name == s_group_id.Text).First().id;
             int gender_id = db.Genders.Where(g => g.gender_name == s_gender_id.Text).First().id;
             Student std = new Student();
@@ -61,7 +71,7 @@ namespace CodeAcademyInfoSystem
             std.student_group_id = group_id;
             std.student_gender_id = gender_id;
             std.student_password = s_password.Text;
-            std.student_photo = imageName;
+            std.student_photo = imgName;
             db.Students.Add(std);
             db.SaveChanges();
             fillDataStudents();
@@ -69,29 +79,29 @@ namespace CodeAcademyInfoSystem
         }
         private void fillDataStudents()
         {
-            dataGridView1.Rows.Clear();
+            dataGridStudent.Rows.Clear();
             int i = 0;
             List<Student> std_list = db.Students.ToList();
             foreach (Student item in std_list)
             {
-                dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[0].Value = item.id;
-                dataGridView1.Rows[i].Cells[1].Value = item.student_surname;
-                dataGridView1.Rows[i].Cells[2].Value = item.student_name;
-                dataGridView1.Rows[i].Cells[3].Value = item.Gender.gender_name;
-                dataGridView1.Rows[i].Cells[4].Value = item.Group.group_name;
-                dataGridView1.Rows[i].Cells[5].Value = item.student_phone;
-                dataGridView1.Rows[i].Cells[6].Value = item.student_email;
-                dataGridView1.Rows[i].Cells[7].Value = item.student_github_account;
-                dataGridView1.Rows[i].Cells[8].Value = item.student_cap_point;
-                dataGridView1.Rows[i].Cells[9].Value = item.student_info;
+                dataGridStudent.Rows.Add();
+                dataGridStudent.Rows[i].Cells[0].Value = item.id;
+                dataGridStudent.Rows[i].Cells[1].Value = item.student_surname;
+                dataGridStudent.Rows[i].Cells[2].Value = item.student_name;
+                dataGridStudent.Rows[i].Cells[3].Value = item.Gender.gender_name;
+                dataGridStudent.Rows[i].Cells[4].Value = item.Group.group_name;
+                dataGridStudent.Rows[i].Cells[5].Value = item.student_phone;
+                dataGridStudent.Rows[i].Cells[6].Value = item.student_email;
+                dataGridStudent.Rows[i].Cells[7].Value = item.student_github_account;
+                dataGridStudent.Rows[i].Cells[8].Value = item.student_cap_point;
+                dataGridStudent.Rows[i].Cells[9].Value = item.student_info;
                 i++;
             }
         }
 
         private void s_student(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            int id = Convert.ToInt32(dataGridStudent.Rows[e.RowIndex].Cells[0].Value);
             selectedStudent = db.Students.Find(id);
             s_surname.Text = selectedStudent.student_surname;
             s_name.Text = selectedStudent.student_name;
@@ -103,6 +113,7 @@ namespace CodeAcademyInfoSystem
             s_cap_point.Text = selectedStudent.student_cap_point.ToString();
             s_group_id.Text = selectedStudent.Group.group_name;
             s_gender_id.Text = selectedStudent.Gender.gender_name;
+            
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -145,9 +156,22 @@ namespace CodeAcademyInfoSystem
             stdInfo.label_s_github.Text = selectedStudent.student_github_account;
             stdInfo.label_s_group.Text = selectedStudent.Group.group_name;
             stdInfo.label_s_point.Text = selectedStudent.student_cap_point.ToString();
-            Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + selectedStudent.student_photo);
-            stdInfo.pictureBoxStd.Image = image;
+            stdInfo.pictureBoxStd.Image = Image.FromFile(@"../../Images/" + selectedStudent.student_photo);
+            
             stdInfo.ShowDialog();
+        }
+
+       
+
+        private void export_Student_btn_Click_1(object sender, EventArgs e)
+        {
+            TaskForm tskf = new TaskForm();
+            tskf.exportExcel(dataGridStudent);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

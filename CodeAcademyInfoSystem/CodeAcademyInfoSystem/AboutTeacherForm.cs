@@ -41,26 +41,16 @@ namespace CodeAcademyInfoSystem
                 i++;
             }
         }
-       
 
-        private void select_about_teacher(object sender, DataGridViewCellMouseEventArgs e)
+        private void export_abt_tch_btn_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dataGridAboutTeacher.Rows[e.RowIndex].Cells[0].Value);
-            selectedAboutTeacher = db.Teachers.Find(id);
+            TaskForm tskf = new TaskForm();
+            tskf.exportExcel(dataGridAboutTeacher);
         }
 
-        private void profile_teacher_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            TeacherInfoForm tchInfo = new TeacherInfoForm();
-            tchInfo.label_t_name.Text = selectedAboutTeacher.teacher_name;
-            tchInfo.label_t_surname.Text = selectedAboutTeacher.teacher_surname;
-            tchInfo.label_t_gender.Text = selectedAboutTeacher.Gender.gender_name;
-            tchInfo.label_t_phone.Text = selectedAboutTeacher.teacher_phone;
-            tchInfo.label_t_email.Text = selectedAboutTeacher.teacher_email;
-            tchInfo.label_t_info.Text = selectedAboutTeacher.teacher_info;
-            Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + selectedAboutTeacher.teacher_photo);
-            tchInfo.pictureBoxTeacher.Image = image;
-            tchInfo.ShowDialog();
+            this.Close();
         }
     }
 }

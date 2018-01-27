@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -14,7 +15,8 @@ namespace CodeAcademyInfoSystem
     public partial class AddMentorForm : Form
     {
         CodeAcademy_DBEntities db = new CodeAcademy_DBEntities();
-        OpenFileDialog img = new OpenFileDialog();
+        public string imgSource = "";
+        public string imgName = "";
         private Mentor selectedMentor;
         public AddMentorForm()
         {
@@ -32,16 +34,24 @@ namespace CodeAcademyInfoSystem
 
         private void browse_m_Click(object sender, EventArgs e)
         {
-            img.ShowDialog();
-            this.pictureBox2.Image = Image.FromFile(img.FileName);
+            //img.ShowDialog();
+            //this.pictureBox2.Image = Image.FromFile(img.FileName);
+            OpenFileDialog f = new OpenFileDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                imgSource = f.FileName;
+                pictureBox2.ImageLocation = f.FileName;
+                imgName = DateTime.Now.ToString("yyyyMMddssHHmm") + f.SafeFileName;
+            }
         }
 
         private void m_add_btn_Click(object sender, EventArgs e)
         {
-            string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
-            WebClient webclient = new WebClient();
-            string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
-            webclient.DownloadFile(img.FileName, path);
+            //string imageName = DateTime.Now.ToString("yyyyMMddssHHmm") + img.SafeFileName;
+            //WebClient webclient = new WebClient();
+            //string path = @"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + imageName;
+            //webclient.DownloadFile(img.FileName, path);
+            File.Copy(imgSource, @"../../Images/" + imgName);
             int gender_id = db.Genders.Where(g => g.gender_name == m_gender.Text).First().id;
             Mentor mnt = new Mentor();
             mnt.mentor_name = m_name.Text;
@@ -51,7 +61,7 @@ namespace CodeAcademyInfoSystem
             mnt.mentor_email = m_email.Text;
             mnt.mentor_password = m_password.Text;
             mnt.mentor_info = m_info.Text;
-            mnt.mentor_photo = imageName;
+            mnt.mentor_photo = imgName;
 
 
             db.Mentors.Add(mnt);
@@ -101,7 +111,7 @@ namespace CodeAcademyInfoSystem
             mntInfo.label_m_phone.Text = selectedMentor.mentor_phone;
             mntInfo.label_m_email.Text = selectedMentor.mentor_email;
             mntInfo.label_m_info.Text = selectedMentor.mentor_info;
-            Image image = Image.FromFile(@"C:\Users\Dr.Rashad\Desktop\Forza_N_R\CodeAcademyInfoSystem\CodeAcademyInfoSystem\Upload\" + selectedMentor.mentor_photo);
+            Image image = Image.FromFile(@"../../Images/" + selectedMentor.mentor_photo);
             mntInfo.pictureBoxMentor.Image = image;
             mntInfo.ShowDialog();
         }
@@ -128,6 +138,16 @@ namespace CodeAcademyInfoSystem
             db.Mentors.Remove(selectedMentor);
             db.SaveChanges();
             fillDataMentors();
+        }
+
+        private void export_Mentor_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

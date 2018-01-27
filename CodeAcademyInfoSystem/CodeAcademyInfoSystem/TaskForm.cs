@@ -67,13 +67,14 @@ namespace CodeAcademyInfoSystem
                 dataGridTask.Rows.Add();
                 dataGridTask.Rows[i].Cells[0].Value = item.id;
                 dataGridTask.Rows[i].Cells[1].Value = item.Task_types.task_type_name;
-                dataGridTask.Rows[i].Cells[2].Value = item.task_start_date;
-                dataGridTask.Rows[i].Cells[3].Value = item.task_end_date;
+                dataGridTask.Rows[i].Cells[2].Value = item.task_start_date.ToShortDateString();
+                dataGridTask.Rows[i].Cells[3].Value = item.task_end_date.ToShortDateString();
                 dataGridTask.Rows[i].Cells[4].Value = item.task_source;
                 dataGridTask.Rows[i].Cells[5].Value = item.Group.group_name;
                 dataGridTask.Rows[i].Cells[6].Value = item.Student.student_name;
                 dataGridTask.Rows[i].Cells[7].Value = item.task_point;
                 dataGridTask.Rows[i].Cells[8].Value = item.task_note;
+                dataGridTask.Rows[i].Cells[9].Value = item.task_point * item.Task_types.task_type_rate;
                 i++;
             }
         }
@@ -121,24 +122,50 @@ namespace CodeAcademyInfoSystem
             fillDataTasks();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            exportExcel(dataGridTask);
+        }
+        public void exportExcel(DataGridView _table)
+        {
+            // creating Excel Application 
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.ActiveSheet;
+            // changing the name of active sheet  
+            worksheet.Name = "Exported from gridview";
+            // storing header part in Excel  
+            for (int i = 1; i < _table.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = _table.Columns[i - 1].HeaderText;
+            }
+            // storing Each row and column value to excel sheet  
+            for (int i = 0; i < _table.Rows.Count; i++)
+            {
+                for (int j = 0; j < _table.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = _table.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            // save the application  
+            workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            // Exit from the application  
+            app.Quit();
+        }
+
        
 
-        private void about_mentor_Click(object sender, EventArgs e)
+        private void label16_Click(object sender, EventArgs e)
         {
-            AboutMentorForm abtmntfrm = new AboutMentorForm();
-            abtmntfrm.ShowDialog();
-        }
-
-        private void about_student_Click(object sender, EventArgs e)
-        {
-            AboutStudentsForm abtstdfrm = new AboutStudentsForm();
-            abtstdfrm.ShowDialog();
-        }
-
-        private void about_group_Click(object sender, EventArgs e)
-        {
-            AboutGroupsForm abtgrpfrm = new AboutGroupsForm();
-            abtgrpfrm.ShowDialog();
+            this.Close();
         }
     }
 }

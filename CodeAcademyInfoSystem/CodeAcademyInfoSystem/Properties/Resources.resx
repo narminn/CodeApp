@@ -118,19 +118,142 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="profile-pictures" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile-pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Singapore_skyline_at_sunset_viewed_from_Gardens_by_the_Bay_East_-_20120426" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Singapore_skyline_at_sunset_viewed_from_Gardens_by_the_Bay_East_-_20120426.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_lock_2199088" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_lock_2199088.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2023" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2023.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dark-purple-colour-image-best-hd-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dark-purple-colour-image-best-hd-wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_user_white_13525" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_user_white_13525.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient_242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradient_243.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solid-color-wallpaper-21962-22515-hd-wallpapers1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-color-wallpaper-21962-22515-hd-wallpapers1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solid-color-wallpaper-21962-22515-hd-wallpapers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-color-wallpaper-21962-22515-hd-wallpapers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-images-9442" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-images-9442.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient_241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradient_242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2560x1440-electric-purple-solid-color-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2560x1440-electric-purple-solid-color-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vFkOwt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vFkOwt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_87_111095" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_87_111095.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="18920214_1684517021857892_8778210388210419009_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18920214_1684517021857892_8778210388210419009_n1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vFkOwt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vFkOwt1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-photo-373893" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-373893.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-images-94421" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-images-94421.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile-pictures" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile-pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no_image_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no_image_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_icons_password_1564520" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_icons_password_1564520.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background-988582_960_7201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-988582_960_7201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AAEAAQAAAAAAAAjkAAAAJDliMDM0ZGUxLTYzNzMtNDAyYi04NmRmLTJhODljMjkzMDgyYQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AAEAAQAAAAAAAAjkAAAAJDliMDM0ZGUxLTYzNzMtNDAyYi04NmRmLTJhODljMjkzMDgyYQ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout_1258-208" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout_1258-208.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="18920214_1684517021857892_8778210388210419009_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18920214_1684517021857892_8778210388210419009_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_account_1954192" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_account_1954192.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_87_111095" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_87_111095.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User-info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User-info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradient_241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="27564b1746701fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\27564b1746701fb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-988582_960_7202" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-988582_960_7202.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="27564b1746701fb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\27564b1746701fb1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="94d3b585-11d9-4db6-877d-2612a24a7f11_code-academy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\94d3b585-11d9-4db6-877d-2612a24a7f11_code-academy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gradient-Wallpaper-Free" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gradient-Wallpaper-Free.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-top-gradient-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-top-gradient-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-988582_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-988582_960_720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Lock_1214985" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Lock_1214985.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aero_dark_orange-t2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aero_dark_orange-t2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_lockoverlay_3690" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_lockoverlay_3690.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -57,18 +57,18 @@ namespace CodeAcademyInfoSystem
         }
         private void fillDataGroups()
         {
-            dataGridView1.Rows.Clear();
+            dataGridGroup.Rows.Clear();
             int i = 0;
             List<Group> mnt_list = db.Groups.ToList();
             foreach (Group item in mnt_list)
             {
-                dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[0].Value = item.id;
-                dataGridView1.Rows[i].Cells[1].Value = item.group_name;
-                dataGridView1.Rows[i].Cells[2].Value = item.Group_types.group_type_name;
-                dataGridView1.Rows[i].Cells[3].Value = item.Teacher.teacher_name;
-                dataGridView1.Rows[i].Cells[4].Value = item.Mentor.mentor_name;
-                dataGridView1.Rows[i].Cells[5].Value = item.group_start_date;
+                dataGridGroup.Rows.Add();
+                dataGridGroup.Rows[i].Cells[0].Value = item.id;
+                dataGridGroup.Rows[i].Cells[1].Value = item.group_name;
+                dataGridGroup.Rows[i].Cells[2].Value = item.Group_types.group_type_name;
+                dataGridGroup.Rows[i].Cells[3].Value = item.Teacher.teacher_name;
+                dataGridGroup.Rows[i].Cells[4].Value = item.Mentor.mentor_name;
+                dataGridGroup.Rows[i].Cells[5].Value = item.group_start_date.ToShortDateString();
                 i++;
             }
         }
@@ -77,7 +77,7 @@ namespace CodeAcademyInfoSystem
 
         private void select_group(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            int id = Convert.ToInt32(dataGridGroup.Rows[e.RowIndex].Cells[0].Value);
             selectedGroup = db.Groups.Find(id);
             g_name.Text = selectedGroup.group_name;
             g_type.Text = selectedGroup.Group_types.group_type_name;
@@ -106,6 +106,17 @@ namespace CodeAcademyInfoSystem
             db.Groups.Remove(selectedGroup);
             db.SaveChanges();
             fillDataGroups();
+        }
+
+        private void export_group_btn_Click(object sender, EventArgs e)
+        {
+            TaskForm tskf = new TaskForm();
+            tskf.exportExcel(dataGridGroup);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

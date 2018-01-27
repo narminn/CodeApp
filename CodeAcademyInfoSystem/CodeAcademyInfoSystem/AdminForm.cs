@@ -17,7 +17,10 @@ namespace CodeAcademyInfoSystem
         {
             InitializeComponent();
         }
-
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(50, Color.Black);
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             AddGroupForm add_group = new AddGroupForm();
@@ -40,6 +43,23 @@ namespace CodeAcademyInfoSystem
         {
             AddMentorForm m = new AddMentorForm();
             m.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddGroupTypeForm grp_type = new AddGroupTypeForm();
+            grp_type.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddGroupScheduleForm grp_sche = new AddGroupScheduleForm();
+            grp_sche.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
